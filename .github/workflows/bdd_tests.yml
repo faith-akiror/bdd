@@ -30,4 +30,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run BDD tests
-        run: python -m behave
+        run: python -m behave -v
