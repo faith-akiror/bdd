@@ -2,9 +2,11 @@ name: Run BDD Tests
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   bdd-test:
@@ -17,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -25,5 +27,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run BDD tests
-        run: |
-          behave
+        run: behave
